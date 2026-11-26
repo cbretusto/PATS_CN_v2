@@ -1491,6 +1491,7 @@
     //-----------------------
     function save_sakidashi_lot_passed(){
       var data = 'col_material_id=' + $("#tbl_sakidashi tbody tr.table-active").find('.col_material_id').val()+'&col_material_po=' + $("#tbl_sakidashi tbody tr.table-active").find('.col_material_po').val()+'&col_parts_preps_id=' + $("#tbl_sakidashi tbody tr.table-active").find('.col_parts_preps_id').val()+'&txt_employee_number_scanner=' + $("#txt_employee_number_scanner").val() + '&_token=' + '{{ csrf_token() }}'+'&status=1'+'&with_partsprep='+$("#tbl_sakidashi tbody tr.table-active").find('.col_with_partsprep').val();
+      
       $.ajax({
         'data'      : data,
         'type'      : 'post',
